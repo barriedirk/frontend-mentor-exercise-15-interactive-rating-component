@@ -38,17 +38,12 @@
     </style>
   </head>
   <body class="flex-column">
-    <main class="rating-state" role="main">
+    <main class="rating-state">
       <section
         class="rating-state__start flex-column"
         aria-labelledby="rating-title"
       >
-        <img
-          src="./images/icon-star.svg"
-          alt="Star"
-          role="presentation"
-          aria-hidden="true"
-        />
+        <img src="./images/icon-star.svg" alt="Star" aria-hidden="true" />
         <h1 id="rating-title">How did we do?</h1>
         <p>
           Please let us know how we did with your support request. All feedback
@@ -90,19 +85,17 @@
       <section
         class="rating-state__thank_you flex-column hidden"
         aria-labelledby="thank-you-title"
-        role="region"
         aria-live="polite"
       >
         <img
           src="./images/illustration-thank-you.svg"
           alt="Image of Thank you"
-          role="presentation"
           aria-hidden="true"
         />
         <p class="rating-state__stars-selected" aria-live="polite">
           You selected <span>0</span> out of <span>5</span>
         </p>
-        <h2>Thank you!</h2>
+        <h2 id="thank-you-title">Thank you!</h2>
         <p class="rating-state__message">
           We appreciate you taking the time to give a rating. If you ever need
           more support, don’t hesitate to get in touch!
