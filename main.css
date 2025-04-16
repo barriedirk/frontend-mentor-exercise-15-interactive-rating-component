@@ -1,0 +1,241 @@
+:root {
+  --ff: "Overpass", sans-serif;
+
+  --fw-thin: 100;
+  --fw-extralight: 200;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+
+  --clr-white: hsl(0, 100%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+
+  --clr-grey-950: hsl(216, 12%, 8%);
+  --clr-grey-900: hsl(213, 19%, 18%);
+  --clr-grey-500: hsl(217, 12%, 63%);
+
+  --clr-orange-500: hsl(25, 97%, 53%);
+
+  --clr-gradient: linear-gradient(
+    to bottom,
+    hsl(216, 18%, 17%),
+    hsl(217, 21%, 12%)
+  );
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: 1.4rem;
+  font-weight: var(--fw-normal);
+  color: var(--clr-grey-500);
+  background-color: var(--clr-grey-950);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+main {
+  max-width: 327px;
+  width: 100%;
+  border-radius: 15px;
+  background: var(--clr-gradient);
+  padding: 24px;
+}
+
+h1,
+h2 {
+  font-size: 2.8rem;
+  color: var(--clr-white);
+  font-weight: var(--fw-bold);
+}
+
+button {
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  background-color: var(--clr-orange-500);
+  color: var(--clr-grey-950);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+fieldset {
+  border: none;
+}
+
+.rating-state__start {
+  gap: 16px;
+
+  img {
+    height: 40px;
+    width: 40px;
+    padding: 16px;
+    border-radius: 50%;
+    background-color: var(--clr-grey-900);
+    margin-bottom: 8px;
+  }
+}
+
+.rating_state__stars {
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+
+  button {
+    background-color: var(--clr-grey-900);
+    color: var(--clr-grey-500);
+    letter-spacing: 0.2px;
+    font-size: 1.4rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+  }
+
+  button.selected {
+    background-color: var(--clr-orange-500) !important;
+    color: var(--clr-grey-950) !important;
+  }
+}
+
+.rating-state__submit {
+  margin-top: 8px;
+  font-size: 1.4rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 1.87px;
+  padding: 16px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.rating_state__stars :is(button:active, button:focus, button:hover),
+:is(button:active, button:focus, button:hover) {
+  background-color: var(--clr-white);
+  color: var(--clr-grey-950);
+}
+
+.rating-state__submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+  background-color: var(--clr-orange-500);
+  color: var(--clr-grey-950);
+}
+
+.rating-state__thank_you {
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  img {
+    width: 144px;
+    height: 96px;
+    margin-bottom: 8px;
+  }
+
+  .rating-state__stars-selected {
+    color: var(--clr-orange-500);
+    background-color: var(--clr-grey-900);
+    font-weight: var(--fw-normal);
+    font-size: 1.4rem;
+    border-radius: 22.5px;
+    padding: 6px 16px;
+    margin-bottom: 8px;
+  }
+
+  .rating-state__message {
+    line-height: 1.8;
+  }
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  main {
+    max-width: 412px;
+    padding: 32px;
+  }
+
+  h1,
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  .rating-state__start {
+    gap: 16px;
+
+    img {
+      height: 48px;
+      width: 48px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .rating_state__stars {
+    button {
+      background-color: var(--clr-grey-900);
+      color: var(--clr-grey-500);
+      letter-spacing: 0.2px;
+      font-size: 1.6rem;
+      width: 51px;
+      height: 51px;
+    }
+  }
+
+  .rating-state__submit {
+    margin-top: 16px;
+    font-size: 1.4rem;
+  }
+
+  .rating-state__thank_you {
+    gap: 16px;
+
+    img {
+      width: 162px;
+      height: 108px;
+      margin-bottom: 16px;
+    }
+
+    .rating-state__stars-selected {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+  }
+}
